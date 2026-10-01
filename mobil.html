@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#004b93">
+  <link rel="icon" href="assets/ab-premia-logo.jpeg" type="image/jpeg">
+  <title>AB Premià Blau · Scouting CB Salt U18</title>
+  <style>
+    :root{--blue:#004b93;--navy:#003b75;--pale:#f3f8fc;--line:#d6e3ef;--ink:#152b42;--muted:#64778b;--green:#2e7d32;--red:#b71c1c;--card:#fff}
+    *{box-sizing:border-box}body{margin:0;background:var(--pale);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.4}
+    header{display:flex;align-items:center;gap:11px;padding:12px 16px;background:var(--blue);color:#fff}.logo{width:45px;height:45px;object-fit:contain;padding:2px;border-radius:9px;background:#fff}.club{font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;opacity:.82}.title{font-weight:850;font-size:1rem}.subhead{margin-top:1px;font-size:.77rem;opacity:.9}
+    main{max-width:680px;margin:auto;padding:14px 12px 28px}.top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:12px}.top h1{margin:0;color:var(--navy);font-size:1.25rem}.top p{margin:3px 0 0;font-size:.8rem;color:var(--muted)}.desktop{display:inline-block;white-space:nowrap;padding:7px 9px;border:1px solid #b8d3eb;border-radius:999px;background:#eaf4fc;color:var(--navy);font-size:.72rem;font-weight:800;text-decoration:none}
+    .card{margin:10px 0;padding:14px;background:var(--card);border:1px solid var(--line);border-radius:15px;box-shadow:0 2px 9px #003b7510}.hero{display:grid;grid-template-columns:65px 1fr;gap:12px;align-items:center}.crest{width:65px;height:65px;object-fit:contain;border:1px solid var(--line);border-radius:50%;padding:4px}.hero h2{margin:0;color:var(--navy);font-size:1.2rem}.hero p{margin:3px 0;color:var(--muted);font-size:.8rem}.match{display:inline-block;margin-top:6px;padding:4px 8px;border-radius:999px;background:#eaf4fc;color:var(--navy);font-size:.73rem;font-weight:800}
+    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:12px}.kpi{padding:9px;border:1px solid var(--line);border-radius:10px;background:#fbfdff}.kpi span{display:block;font-size:.62rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.kpi strong{display:block;margin-top:2px;color:var(--navy);font-size:1.05rem}.good{color:var(--green)!important}.bad{color:var(--red)!important}
+    h3{margin:0;color:var(--navy);font-size:1rem}.description{margin:3px 0 10px;color:var(--muted);font-size:.77rem}.section-title{display:flex;align-items:center;gap:8px;margin:17px 2px 7px}.section-title:before{content:"";width:4px;height:18px;border-radius:9px;background:var(--blue)}
+    .standing{display:grid;grid-template-columns:24px 1fr 35px 35px 35px;gap:4px;align-items:center;padding:8px 4px;border-bottom:1px solid var(--line);font-size:.77rem}.standing.head{padding-top:4px;color:var(--muted);font-size:.63rem;font-weight:850;text-transform:uppercase}.standing.ours{margin:0 -4px;padding:8px;background:#e9fbf6;border-radius:8px;color:#064d6f;font-weight:850}.standing b{text-align:center}.standing .team{font-weight:750}.results{width:100%;border-collapse:collapse;font-size:.76rem}.results th{padding:7px 4px;border-bottom:1px solid var(--line);color:var(--muted);font-size:.62rem;text-align:left;text-transform:uppercase}.results td{padding:8px 4px;border-bottom:1px solid var(--line)}.results td:last-child{text-align:right;font-weight:850}.summary{margin-top:9px;padding:9px;border-radius:9px;background:#e9fbf6;color:#064d6f;font-size:.77rem}.summary strong{display:block;font-size:.86rem}
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:8px}.team-card{padding:10px;border:1px solid var(--line);border-radius:10px}.team-card strong{display:block;color:var(--navy);font-size:.86rem}.team-card p{margin:5px 0 0;font-size:.75rem;color:var(--muted)}
+    .production{display:grid;gap:8px}.prod{padding:10px;border:1px solid var(--line);border-radius:10px}.prod-top{display:flex;justify-content:space-between;color:var(--muted);font-size:.69rem;font-weight:850}.prod strong{display:block;margin:3px 0;color:var(--navy);font-size:1.05rem}.track{height:7px;border-radius:8px;background:#e9eef4;overflow:hidden}.bar{height:100%;border-radius:8px;background:var(--blue)}.bar.cyan{background:#438fc7}.bar.light{background:#73a8d8}
+    .player{display:grid;grid-template-columns:1fr 45px 45px 45px;gap:5px;align-items:center;padding:9px 2px;border-bottom:1px solid var(--line);font-size:.76rem}.player.head{font-size:.62rem;color:var(--muted);font-weight:850;text-transform:uppercase}.player b{text-align:right}.player .name{font-weight:800;color:var(--navy)}.player .number{color:var(--muted);font-weight:600}
+    .call{margin-top:9px;padding:10px 11px;border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:10px}.call.warn{border-left-color:#e09b00}.call.ok{border-left-color:var(--green)}.call strong{display:block;color:var(--navy);font-size:.82rem}.call p{margin:2px 0 0;color:var(--muted);font-size:.77rem}.plan{display:grid;gap:8px}.plan div{padding:10px;border:1px dashed var(--line);border-radius:10px;background:#fbfdff}.plan h4{margin:0 0 5px;color:var(--navy);font-size:.8rem}.plan ul{margin:0;padding-left:17px;font-size:.76rem}.plan li+li{margin-top:3px}
+    footer{text-align:center;padding:17px 10px 5px;color:var(--muted);font-size:.7rem}@media(min-width:520px){main{padding:20px}.kpis{grid-template-columns:repeat(5,1fr)}.hero{grid-template-columns:76px 1fr}.crest{width:76px;height:76px}}
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="assets/ab-premia-logo.jpeg" alt="Escut Agrupació Bàsquet Premià de Mar">
+    <div><div class="club">Agrupació Bàsquet Premià de Mar</div><div class="title">Scouting AB Premià Blau</div><div class="subhead">Versió mòbil · Temporada 26-27</div></div>
+  </header>
+  <main>
+    <div class="top"><div><h1>CB Salt U18</h1><p>Preparació del partit · Jornada 4</p></div><a class="desktop" href="index.html">Versió completa</a></div>
+    <section class="card hero">
+      <img class="crest" src="assets/cb-salt-logo.svg" alt="Logo CB Salt U18">
+      <div><h2>CB Salt U18</h2><p>Rival de l’AB Premià Blau</p><span class="match">03/10/2026 · 16:00 · Casa</span></div>
+      <div class="kpis" style="grid-column:1/-1"><div class="kpi"><span>Posició</span><strong>1r</strong></div><div class="kpi"><span>Balanç</span><strong>3–0</strong></div><div class="kpi"><span>PF/P</span><strong>86.3</strong></div><div class="kpi"><span>PC/P</span><strong>70.0</strong></div><div class="kpi"><span>DIF/P</span><strong class="good">+16.3</strong></div></div>
+    </section>
+
+    <div class="section-title"><h3>Classificació</h3></div>
+    <section class="card"><div class="standing head"><span>#</span><span>Equip</span><b>J</b><b>G</b><b>Pts</b></div><div class="standing"><span>1</span><span class="team">CB SALT U18</span><b>3</b><b>3</b><b>6</b></div><div class="standing ours"><span>2</span><span class="team">AB PREMIÀ BLAU</span><b>3</b><b>3</b><b>6</b></div><div class="standing"><span>3</span><span class="team">CB SANT CELONI U18M</span><b>3</b><b>2</b><b>5</b></div><div class="standing"><span>4</span><span class="team">CB BLANES A</span><b>3</b><b>2</b><b>5</b></div><div class="standing"><span>5</span><span class="team">CB FARNERS A</span><b>3</b><b>1</b><b>4</b></div><div class="standing"><span>6</span><span class="team">CB CALELLA</span><b>3</b><b>1</b><b>4</b></div><div class="standing"><span>7</span><span class="team">SOL GIRONÈS BISBAL</span><b>3</b><b>0</b><b>3</b></div><div class="standing"><span>8</span><span class="team">CB BOET MATARÓ</span><b>3</b><b>0</b><b>3</b></div></section>
+
+    <div class="section-title"><h3>Últims partits</h3></div>
+    <section class="card"><table class="results"><thead><tr><th>Data</th><th>Rival</th><th>Resultat</th><th>DIF</th></tr></thead><tbody><tr><td>27/09</td><td>CB Blanes A</td><td>88–67</td><td class="good">+21</td></tr><tr><td>20/09</td><td>Sol Gironès Bisbal</td><td>71–70</td><td class="good">+1</td></tr><tr><td>13/09</td><td>CB Calella</td><td>100–73</td><td class="good">+27</td></tr></tbody></table><div class="summary"><strong>3–0 · 259 PF · 210 PC</strong>Casa: 2–0 (+24.0) · Fora: 1–0 (+1.0)</div></section>
+
+    <div class="section-title"><h3>Comparativa directa</h3></div>
+    <section class="card compare"><div class="team-card"><strong>CB Salt U18</strong><p>1r · 3–0<br><b class="good">86.3 PF/P · +16.3</b><br>70.0 PC/P</p></div><div class="team-card"><strong>AB Premià Blau</strong><p>2n · 3–0<br>74.0 PF/P · +11.3<br><b class="good">62.7 PC/P</b></p></div></section>
+
+    <div class="section-title"><h3>Producció ofensiva</h3></div>
+    <section class="card production"><div class="prod"><div class="prod-top"><span>2 PUNTS</span><span>52.5%</span></div><strong>136 punts</strong><div class="track"><div class="bar" style="width:52.5%"></div></div></div><div class="prod"><div class="prod-top"><span>3 PUNTS</span><span>27.8%</span></div><strong>72 punts</strong><div class="track"><div class="bar cyan" style="width:27.8%"></div></div></div><div class="prod"><div class="prod-top"><span>TIR LLIURE</span><span>19.7%</span></div><strong>51 punts · 51/81</strong><div class="track"><div class="bar light" style="width:19.7%"></div></div></div></section>
+
+    <div class="section-title"><h3>Jugadors clau</h3></div>
+    <section class="card"><div class="player head"><span>Jugador</span><b>MIN/P</b><b>PTS/P</b><b>TL%</b></div><div class="player"><span class="name"><span class="number">11</span> Narcís Vidal García</span><b>29.1</b><b class="good">21.7</b><b>75.0</b></div><div class="player"><span class="name"><span class="number">17</span> Pau Gay Hereu</span><b>20.9</b><b class="good">14.0</b><b>65.5</b></div><div class="player"><span class="name"><span class="number">4</span> Grau Paradinas Delgado</span><b>24.3</b><b>9.3</b><b class="good">100.0</b></div><div class="player"><span class="name"><span class="number">26</span> Styve Fokem Fomekong</span><b>17.2</b><b>8.7</b><b>71.4</b></div><div class="player"><span class="name"><span class="number">7</span> Oriol Jaimez Termens</span><b>13.9</b><b>6.7</b><b>75.0</b></div></section>
+
+    <div class="section-title"><h3>Lectura per scouting</h3></div>
+    <section class="card"><div class="call ok"><strong>Rival invicte i de producció alta</strong><p>3–0, 86.3 punts a favor i +16.3 de diferencial per partit.</p></div><div class="call warn"><strong>Fora baixa el marge</strong><p>El seu únic partit fora va acabar 71–70. Cal buscar un partit controlat i igualat.</p></div><div class="call"><strong>Protegir pintura i evitar bonus</strong><p>El 52.5% dels punts són de dos i generen 27.0 intents de tir lliure per partit.</p></div></section>
+
+    <div class="section-title"><h3>Pla de partit AB Premià Blau</h3></div>
+    <section class="card plan"><div><h4>Objectius defensius</h4><ul><li>Protegir pintura i tancar rebot.</li><li>Defensar verticals per reduir tirs lliures.</li><li>Negar recepcions còmodes a Narcís i Pau.</li></ul></div><div><h4>Objectius ofensius</h4><ul><li>Jugar amb paciència i no precipitar tirs.</li><li>Buscar avantatges abans que la defensa es reorganitzi.</li></ul></div><div><h4>Gestió i riscos</h4><ul><li>Mantenir el partit igualat fins al final.</li><li>Evitar pèrdues en transició i segones opcions.</li></ul></div></section>
+  </main>
+  <footer>Agrupació Bàsquet Premià de Mar · Temporada 26-27</footer>
+</body>
+</html>
